@@ -11,19 +11,22 @@ function App() {
   return (
     <Router>
       <Layout style={{height: '100%'}}>
-        <Header style={{color: '#fff', fontSize: 24}}>五金 ERP 管理系统</Header>
+        <Header style={{color: '#fff', fontSize: 24}}>奥利给五金ERP管理系统</Header>
         <Layout>
           <Sider className="site-layout-background fx1">
             <nav>
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/home">材料管理</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/about">生产管理</Link>
                 </li>
                 <li>
-                  <Link to="/home">Users</Link>
+                  <Link to="/home">仓库管理</Link>
+                </li>
+                <li>
+                  <Link to="/about">档案管理</Link>
                 </li>
               </ul>
             </nav>
@@ -35,7 +38,7 @@ function App() {
               </Switch>
           </Content>
         </Layout>
-        <Footer>Footer</Footer>
+        <Footer><div style={{display: 'flex', justifyContent: 'space-between'}}><span>登录用户：魏岁奥（普通用户）</span><span>登录时间：2020-09-25 09:10</span><span>记录数：0</span><span>连接状态：在线</span></div></Footer>
       </Layout>
     </Router>
   );
