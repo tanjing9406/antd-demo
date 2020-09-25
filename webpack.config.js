@@ -58,6 +58,7 @@ module.exports = {
         host: 'localhost', // 服务器的ip地址 希望服务器外可以访问就设置 0.0.0.0
         port: 8080, // 端口
         open: 'google chrome', // 自动打开页面
+        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({
