@@ -11,6 +11,8 @@ import {
 import 'antd/dist/antd.css'
 import './App.css'
 
+import { AuSider } from './components'
+
 const { Header, Footer, Sider, Content } = Layout;
 const { SubMenu } = Menu;
 
@@ -55,7 +57,7 @@ function App() {
 }
 
 function Home() {
-  return (<div>home page</div>)
+  return (<div>home page<AuSider /></div>)
 }
 
 function About() {
