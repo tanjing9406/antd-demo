@@ -25,7 +25,7 @@ const { Header, Footer, Content } = Layout;
 function App() {
   const loginOut = () => {
     sessionStorage.removeItem('isAuthenticated')
-    window.location.pathname = '/login'
+    window.location.reload()
   }
   return (
     <Router>
