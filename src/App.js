@@ -9,12 +9,23 @@ import './App.css'
 import { AuSider, PrivateRoute } from './components'
 import LoginPage from './pages/loginpage'
 
+import MenuConfig from './config/menu.config'
+
+const genMenuRoute = () => {
+  return MenuConfig.reduce((rst, curItem, curIndex) => {
+    return [
+      ...rst,
+      ...curItem.subMenu.map(i => <Route key={i.url} path={i.url} component={i.component} />)
+    ]
+  }, [])
+}
+
 const { Header, Footer, Content } = Layout;
 
 function App() {
   const loginOut = () => {
     sessionStorage.removeItem('isAuthenticated')
-    window.location.reload(false)
+    window.location.pathname = '/login'
   }
   return (
     <Router>
@@ -24,17 +35,16 @@ function App() {
           <Layout style={{ height: '100%' }}>
             <Header style={{ color: '#fff', fontSize: 24, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               奥利给五金ERP管理系统
-              <Button type="primary" ghost onClick={loginOut}>模拟退出</Button>
+              <Button type="primary" onClick={loginOut}>模拟退出</Button>
             </Header>
             <Layout>
               <AuSider />
               <Content>
                 <Switch>
                   <Route path='/' exact>
-                    <Redirect to='/home' />
+                    <Redirect to='/prod/planingNumbers' />
                   </Route>
-                  <Route path="/home" component={Home} />
-                  <Route path="/about" render={({ match }) => <About />} />
+                  {genMenuRoute()}
                 </Switch>
               </Content>
             </Layout>
@@ -44,14 +54,6 @@ function App() {
       </Switch>
     </Router>
   );
-}
-
-function Home() {
-  return (<div>home page</div>)
-}
-
-function About() {
-  return (<div>about page</div>)
 }
 
 export default App;
