@@ -5,11 +5,11 @@ function Coming() {
 }
 
 export default [{
-    id: 'material-management',
+    id: 'material',
     title: '材料管理',
     subMenu: [
         {
-            id: 'mate-test1',
+            id: 'material-test1',
             title: '材料1',
             url: '/material/test1',
             component: Coming

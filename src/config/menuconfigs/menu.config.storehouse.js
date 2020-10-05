@@ -5,7 +5,7 @@ function Coming() {
 }
 
 export default [{
-    id: 'store-management',
+    id: 'store',
     title: '仓库管理',
     subMenu: [
         {

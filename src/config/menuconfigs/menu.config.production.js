@@ -5,11 +5,11 @@ function Coming() {
 }
 
 export default [{
-    id: 'prod-management',
+    id: 'prod',
     title: '生产管理',
     subMenu: [
         {
-            id: 'prod-planning-numbers',
+            id: 'prod-planingNumbers',
             title: '生产计划量',
             url: '/prod/planingNumbers',
             component: Coming

@@ -13,8 +13,9 @@ const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 const AuSider = () => {
+    const pathname = window.location.pathname.slice(1).split('/')
     const [collapsed, setCollapsed] = useState(false)
-    const [openKeys, setOpenKeys] = useState(['prod-management'])
+    const [openKeys, setOpenKeys] = useState([pathname[0]])
 
     const onOpenChange = (oKeys) => {
         if (oKeys.length === 0 || (openKeys && openKeys.length === 0)) {
@@ -27,7 +28,7 @@ const AuSider = () => {
 
     return (
         <Sider className="site-layout-background fx1" collapsible collapsed={collapsed} onCollapse={setCollapsed}>
-            <Menu theme="dark" defaultSelectedKeys={['prod-planning-numbers']} openKeys={openKeys} onOpenChange={onOpenChange} mode="inline">
+            <Menu theme="dark" defaultSelectedKeys={[pathname.join('-')]} openKeys={openKeys} onOpenChange={onOpenChange} mode="inline">
                 {MenuConfig.map((menuItem) => (
                     <SubMenu key={menuItem.id} icon={<UserOutlined />} title={menuItem.title}>
                         {menuItem.subMenu.map(sub => <Menu.Item key={sub.id}><Link to={sub.url}>{sub.title}</Link></Menu.Item>)}

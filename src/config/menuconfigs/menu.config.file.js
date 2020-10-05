@@ -5,7 +5,7 @@ function Coming() {
 }
 
 export default [{
-    id: 'file-management',
+    id: 'file',
     title: '档案管理',
     subMenu: [
         {
