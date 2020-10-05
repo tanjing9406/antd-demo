@@ -15,20 +15,20 @@ const { SubMenu } = Menu;
 
 const AuSider = () => {
     const [collapsed, setCollapsed] = useState(false)
-    const [openKeys1, setOpenKeys1] = useState(['sub2'])
+    const [openKeys, setOpenKeys] = useState(['sub2'])
 
     const onOpenChange = (oKeys) => {
-        if(oKeys.length === 0 || (openKeys1 && openKeys1.length === 0)) {
-            setOpenKeys1(oKeys)
+        if(oKeys.length === 0 || (openKeys && openKeys.length === 0)) {
+            setOpenKeys(oKeys)
             return
         }
-        const nextOpenKeys = oKeys.find(key => openKeys1.indexOf(key) === -1)
-        setOpenKeys1([nextOpenKeys])
+        const nextOpenKeys = oKeys.find(key => openKeys.indexOf(key) === -1)
+        setOpenKeys([nextOpenKeys])
     }
 
     return (
         <Sider className="site-layout-background fx1" collapsible collapsed={collapsed} onCollapse={setCollapsed}>
-            <Menu theme="dark" defaultSelectedKeys={['1']} openKeys={openKeys1} onOpenChange={onOpenChange} mode="inline">
+            <Menu theme="dark" defaultSelectedKeys={['1']} openKeys={openKeys} onOpenChange={onOpenChange} mode="inline">
                 <SubMenu key="sub1" icon={<UserOutlined />} title="材料管理">
                     <Menu.Item key="3"><Link to="/home">材料1</Link></Menu.Item>
                     <Menu.Item key="4"><Link to="/about">材料2</Link></Menu.Item>
