@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // 生成html模板
 
 module.exports = {
     mode: 'development',
+    devtool: 'eval-cheap-source-map',
     entry: {
         home: './src/index.js'
     },
