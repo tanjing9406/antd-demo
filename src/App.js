@@ -33,23 +33,23 @@ function App() {
         <Route path="/login" component={LoginPage} />
         <PrivateRoute path="/">
           <Layout style={{ height: '100%' }}>
-            {/* <Header style={{ color: '#fff', fontSize: 24, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <Header style={{ color: '#fff', fontSize: 24, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               奥利给五金ERP管理系统
               <Button type="primary" onClick={loginOut}>模拟退出</Button>
-            </Header> */}
+            </Header>
             <Layout>
-              {/* <AuSider /> */}
+              <AuSider />
               <Content>
                 <Switch>
                   <Route path='/' exact>
-                    {/* <Redirect to='/prod/planingNumbers' /> */}
-                    <Redirect to='/demo/1' />
+                    <Redirect to='/prod/planingNumbers' />
+                    {/* <Redirect to='/demo/1' /> */}
                   </Route>
                   {genMenuRoute()}
                 </Switch>
               </Content>
             </Layout>
-            {/* <Footer><div style={{ display: 'flex', justifyContent: 'space-between' }}><span>登录用户：魏岁奥（普通用户）</span><span>登录时间：2020-09-25 09:10</span><span>记录数：0</span><span>连接状态：在线</span></div></Footer> */}
+            <Footer><div style={{ display: 'flex', justifyContent: 'space-between' }}><span>登录用户：魏岁奥（普通用户）</span><span>登录时间：2020-09-25 09:10</span><span>记录数：0</span><span>连接状态：在线</span></div></Footer>
           </Layout>
         </PrivateRoute>
       </Switch>

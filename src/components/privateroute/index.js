@@ -6,7 +6,7 @@ export default function PrivateRoute({ children, ...rest }) {
     <Route
       {...rest}
       render={({ location }) =>
-        sessionStorage.getItem('isAuthenticated') || true ? (
+        sessionStorage.getItem('isAuthenticated') ? (
           children
         ) : (
             <Redirect

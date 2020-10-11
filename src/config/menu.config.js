@@ -6,10 +6,10 @@ import MenuStoreHouse from './menuconfigs/menu.config.storehouse'
 import MenuFile from './menuconfigs/menu.config.file'
 
 export default [
-    // ...MenuMaterial,
-    // ...MenuProd,
-    // ...MenuStoreHouse,
-    // ...MenuFile,
+    ...MenuMaterial,
+    ...MenuProd,
+    ...MenuStoreHouse,
+    ...MenuFile,
     {
         id: 'demo',
         title: '演示示例',
