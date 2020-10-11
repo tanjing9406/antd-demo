@@ -43,6 +43,10 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.less$/,
+                use: ['style-loader', 'css-loader', 'less-loader'] // compiles Less to CSS
+            },
             { test: /\.css$/, use: ['style-loader', 'css-loader'] },
             {
                 test: /\.m?js$/,
