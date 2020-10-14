@@ -10,6 +10,7 @@ import { AuSider, PrivateRoute } from './components'
 import LoginPage from './pages/loginpage'
 
 import MenuConfig from './config/menu.config'
+import DragPage from './pages/demo/drag'
 
 const genMenuRoute = () => {
   return MenuConfig.reduce((rst, curItem, curIndex) => {
@@ -30,6 +31,7 @@ function App() {
   return (
     <Router>
       <Switch>
+        <DragPage />
         <Route path="/login" component={LoginPage} />
         <PrivateRoute path="/">
           <Layout style={{ height: '100%' }}>

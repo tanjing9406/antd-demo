@@ -10,8 +10,8 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        path: path.resolve(__dirname, 'docs'),
+        // publicPath: '/'
     },
     module: {
         rules: [
@@ -68,7 +68,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: path.resolve(__dirname, 'dist/index.html'), // 生成的html文件存放的地址和文件名
+            filename: path.resolve(__dirname, 'docs/index.html'), // 生成的html文件存放的地址和文件名
             template: path.resolve(__dirname, 'public/index.html'), // 基于index.html模板进行生成html文件
         }),
     ]

@@ -73,6 +73,7 @@ const DragPage = () => {
                     onClick={() => toggleClass(cn2, setCn2)}
                     onMouseDown={handleMouseDown}
                     onMouseMove={(e) => handleMouseMove(e, pt2, setpt2)}
+                    onMouseOut={handleMouseOut}
                     onMouseUp={handleMouseUp}
                 />
             </svg>
