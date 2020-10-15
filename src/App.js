@@ -43,7 +43,6 @@ function App() {
                 <Switch>
                   <Route path='/' exact>
                     <Redirect to='/prod/planingNumbers' />
-                    {/* <Redirect to='/demo/1' /> */}
                   </Route>
                   {genMenuRoute()}
                 </Switch>
