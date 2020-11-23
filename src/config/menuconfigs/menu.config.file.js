@@ -1,18 +1,21 @@
-import React from 'react';
-
-function Coming() {
-    return (<div>档案管理，敬请期待！</div>)
-}
+import ProdFile from '../../pages/filemanagement/prodfile'
+import MaterialFile from '../../pages/filemanagement/materialfile'
 
 export default [{
     id: 'file',
     title: '档案管理',
     subMenu: [
         {
-            id: 'file-test1',
-            title: '档案1',
-            url: '/file/test1',
-            component: Coming
+            id: 'file-prod',
+            title: '产品档案',
+            url: '/file/prod',
+            component: ProdFile
+        },
+        {
+            id: 'file-material',
+            title: '材料档案',
+            url: '/file/material',
+            component: MaterialFile
         }
     ]
 }]
